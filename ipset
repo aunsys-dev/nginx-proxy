@@ -1,0 +1,8 @@
+#!/bin/bash
+_input=/root/myiptables/ipv4_au
+ipset destroy ipau || true
+ipset -N ipau nethash
+egrep -v "^#|^$" x | while IFS= read -r ip
+do
+	ipset add ipau $ip
+done < "$_input"
