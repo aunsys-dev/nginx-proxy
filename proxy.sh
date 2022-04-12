@@ -6,6 +6,8 @@ echo Input port proxy:
 read port
 #setting port ssh
 
+cd /root/npm && docker-compose down
+
 apt install nginx -y
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/aunsys-dev/nginx-proxy/master/nginx.conf"
 wget -O /etc/nginx/sites-available/proxy.conf "https://raw.githubusercontent.com/aunsys-dev/nginx-proxy/master/proxy.conf"
