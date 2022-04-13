@@ -7,7 +7,7 @@ read port
 
 iptables -F
 iptables -X
-
+docker-compose -f /root/npm/docker-compose.yml down
 
 apt install nginx -y
 rm /etc/nginx/sites-available/proxy.conf
@@ -28,4 +28,5 @@ sed -i "s/x.x.x.x/$IP/g" /etc/nginx/sites-available/proxy.conf
 sed -i "s/z.z.z.z/$port/g" /etc/nginx/sites-available/proxy.conf
 sed -i "s/y.y.y.y/$proxy_pass/g" /etc/nginx/sites-available/proxy.conf
 
-systemctl restart nginx
+service nginx restart
+service nginx reload
