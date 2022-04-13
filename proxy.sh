@@ -4,7 +4,10 @@ read proxy_pass
 
 echo Input port proxy:
 read port
-#setting port ssh
+
+iptables -F
+iptables -X
+
 
 apt install nginx -y
 rm /etc/nginx/sites-available/proxy.conf
