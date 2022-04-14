@@ -13,8 +13,8 @@ apt install nginx -y
 rm /etc/nginx/sites-available/proxy.conf
 rm /etc/nginx/sites-enabled/proxy.conf
 
-rm /etc/nginx/sites-available/proxy
-rm /etc/nginx/sites-enabled/proxy
+rm /etc/nginx/sites-available/proxy.conf
+rm /etc/nginx/sites-enabled/proxy.conf
 
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/aunsys-dev/nginx-proxy/master/nginx.conf"
 wget -O /etc/nginx/sites-available/proxy.conf "https://raw.githubusercontent.com/aunsys-dev/nginx-proxy/master/proxy-https.conf"
