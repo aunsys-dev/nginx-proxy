@@ -2,11 +2,7 @@
 echo Input IP server tujuan:
 read proxy_pass
 
-echo Input port proxy:
-read port
 
-iptables -F
-iptables -X
 docker-compose -f /root/npm/docker-compose.yml down
 
 apt install nginx -y
