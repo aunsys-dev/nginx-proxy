@@ -13,7 +13,7 @@ rm /etc/nginx/sites-available/proxy.conf
 rm /etc/nginx/sites-enabled/proxy.conf
 
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/aunsys-dev/nginx-proxy/master/nginx.conf"
-wget -O /etc/nginx/sites-available/proxy.conf "https://raw.githubusercontent.com/aunsys-dev/nginx-proxy/master/proxy-nonport.conf"
+wget -O /etc/nginx/sites-available/proxy.conf "https://raw.githubusercontent.com/aunsys-dev/nginx-proxy/master/proxy-nonportHTTPS.conf"
 ln -s /etc/nginx/sites-available/proxy.conf /etc/nginx/sites-enabled/
 service nginx restart
 
